@@ -81,6 +81,16 @@
   .logo {
     font-size: 1.5rem;
   }
+  .mobile-nav-controls {
+    margin-right: 1rem;
+  }
+  .theme-toggle {
+    padding: 6px;
+  }
+  .theme-toggle svg {
+    width: 20px;
+    height: 20px;
+  }
   .nav-links {
     flex-direction: column;
     gap: 0.5rem;
@@ -99,5 +109,23 @@
   }
   .text-container {
     text-align: justify;
+  }
+  
+  /* Improve skills grid on mobile */
+  .article-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 100%;
+  }
+  
+  article {
+    min-width: auto;
+    justify-content: flex-start;
+  }
+  
+  /* Remove centering on mobile since it's single column */
+  .article-container article:last-child:nth-child(3n+1),
+  .article-container article:last-child:nth-child(3n+2) {
+    grid-column: auto;
   }
 }

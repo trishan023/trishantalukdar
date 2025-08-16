@@ -116,6 +116,7 @@
     grid-template-columns: 1fr;
     gap: 1rem;
     max-width: 100%;
+    padding: 0 0.5rem;
   }
   
   article {
@@ -124,8 +125,7 @@
   }
   
   /* Remove centering on mobile since it's single column */
-  .article-container article:last-child:nth-child(3n+1),
-  .article-container article:last-child:nth-child(3n+2) {
-    grid-column: auto;
+  .article-container article:last-child:nth-child(odd) {
+    justify-self: auto;
   }
 }
